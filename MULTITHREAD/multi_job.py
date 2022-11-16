@@ -68,7 +68,7 @@ def download_data(website_queue):
             break
         response = requests.get(var)
         response.raise_for_status()  # genera un'eccezione se la risposta è in stato di errore
-        soup = bs4.BeautifulSoup(response.text, 'html.parser')  # Estraiamo il testo dalla risposta. Il testo è in formato html e lo salviamo in una variabile soup
+        soup = bs4.BeautifulSoup(response.text, 'html.parser')  # Estraiamo il testo dalla risposta in formato html e lo salviamo in una variabile soup
         t0 = time()
         sleep(3)
         data_queue.put((soup, var, t0))
