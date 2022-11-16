@@ -1,0 +1,14 @@
+# ignore Multi-thread.ipynb files
+Multi-thread.ipynb
+
+# ignore TESTO_AUTO.txt file
+TESTO_AUTO.txt
+
+# ignore dati, tests folders
+dati
+tests
+.ipynb_checkpoints
+myenv
+.idea
+
+
