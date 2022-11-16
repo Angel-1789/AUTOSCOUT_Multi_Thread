@@ -1,0 +1,12 @@
+{"div_pagine" : "ListPage_pagination__v_4ci",
+"lista_pagine" : "pagination-item--disabled pagination-item--page-indicator",
+"article_class" : "cldt-summary-full-item listing-impressions-tracking list-page-item ListItem_article__ppamD",
+"div_dati" : "ListItem_wrapper__J_a_C",
+"div_marca_modello" : "ListItem_header__uPzec",
+"div_vendita" : "ListItem_listing__VjI4F",
+"div_prezzo" : "ListItem_pricerow__6_wJa",
+"div_dato_prezzo" : "Price_wrapper__E5C5Y",
+"div_dati_vendita" : "VehicleDetailTable_container__mUUbY",
+"div_venditore" : "SellerInfo_wrapper__mLtya",
+"span_nome" : "SellerInfo_name__yjUE6",
+"span_ind" : "SellerInfo_address__txoNV"}

@@ -1,0 +1,14 @@
+# ignore ALL .ipynb files
+*.ipynb
+
+# ignore TESTO_AUTO.txt file
+TESTO_AUTO.txt
+
+# ignore dati, tests folders
+dati/*.csv
+tests
+.ipynb_checkpoints
+myenv
+.idea
+MULTITHREAD/__pycache__
+
