@@ -2,6 +2,7 @@ import bs4  # Beautiful Soup v4 -> libreria di websraping, ci permette di estrar
 import requests  # libreria standard di Python per accedere ai siti web, tramitte richieste HTTP
 from queue import Queue
 from multi_job import usa_threads
+from salvataggioDB import create_db_connection, execute_list_query
 import csv
 from datetime import datetime
 import json
@@ -63,7 +64,22 @@ righe = []
 for page in auto:
     for dati_auto in auto[page]:
         righe.append(list(dati_auto.values()))
-        with open('../dati/dati_auto_' + str(datetime.now().strftime("%Y%m%d_%H%M%H")) + '.csv', 'w') as f:
-            w = csv.writer(f)
-            w.writerow(fields)
-            w.writerows(righe)
+with open('../dati/dati_auto_' + str(datetime.now().strftime("%Y%m%d_%H%M%H")) + '.csv', 'w', newline='') as f:
+    w = csv.writer(f)
+    w.writerow(fields)
+    w.writerows(righe)
+
+#-------------------------------------------------------------------------------------------SALVA_DATI_NEL_DB
+pw = 'test'
+db = 'auto'
+connection = create_db_connection("localhost", "root", pw, db)
+
+sql = '''
+    INSERT INTO teacher (teacher_id, first_name, last_name, language_1, language_2, dob, tax_id, phone_no) 
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+    '''
+
+val = [
+    (7, 'Hank', 'Dodson', 'ENG', None, '1991-12-23', 11111, '+491772345678'),
+    (8, 'Sue', 'Perkins', 'MAN', 'ENG', '1976-02-02', 22222, '+491443456432')
+]
